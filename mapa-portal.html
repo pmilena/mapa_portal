@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa Multicampia</title>
+  <meta name="description" content="Mapa que apresenta os cursos da Universidade do Estado da Bahia e como estão distribuídos em seus respectivos campi/departamentos.">
+
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./script/script.js"></script>
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+ 
+ 
+</head>
+ 
+<body>
+
+  <section class="first-section">
+
+  <div class="multicampi-title">
+    <img class="multicampi" src="img/multicampi.svg" alt="A UNEB é multicampi">
+  </div>  
+
+    <select id="cursoSelect" class="cursoSelect" onchange="atualizarCores()">
+      <option value="all" selected>Cursos de Graduação</option>
+      <option value="administracao">Administração</option>
+      <option value="arqueologia">Arqueologia</option>
+      <option value="ciencias_biologicas">Ciências Biológicas</option>
+      <option value="ciencias_contabeis">Ciências Contábeis</option>
+      <option value="ciencias_sociais">Ciências Sociais</option>
+      <option value="comunicacao_jornalismo">Comunicação Social - Jornalismo em Multimeios</option>
+      <option value="comunicacao_radio_tv">Comunicação Social - Rádio e Televisão</option>
+      <option value="comunicacao_relacoes_publicas">Comunicação Social - Relações Públicas</option>
+      <option value="design">Design</option>
+      <option value="direito">Direito</option>
+      <option value="educacao_fisica">Educação Física</option>
+      <option value="enfermagem">Enfermagem</option>
+      <option value="engenharia_agronomica">Engenharia Agronômica</option>
+      <option value="engenharia_bioprocessos_biotecnologia">Engenharia de Bioprocessos e Biotecnologia</option>
+      <option value="engenharia_minas">Engenharia de Minas</option>
+      <option value="engenharia_pesca">Engenharia de Pesca</option>
+      <option value="engenharia_producao_civil">Engenharia de Produção Civil</option>
+      <option value="engenharia_sanitaria_ambiental">Engenharia Sanitária e Ambiental</option>
+      <option value="farmacia">Farmácia</option>
+      <option value="filosofia">Filosofia</option>
+      <option value="fisica">Física</option>
+      <option value="fisioterapia">Fisioterapia</option>
+      <option value="fonoaudiologia">Fonoaudiologia</option>
+      <option value="geografia">Geografia</option>
+      <option value="historia">História</option>
+      <option value="jogos_digitais">Jogos Digitais</option>
+      <option value="letras_francesa_literaturas">Letras - Língua Francesa e Literaturas</option>
+      <option value="letras_inglesa_literaturas">Letras - Língua Inglesa e Literaturas</option>
+      <option value="letras_portuguesa_literaturas">Letras - Língua Portuguesa e Literaturas</option>
+      <option value="letras_espanhola_literaturas">Letras - Língua Espanhola e Literaturas</option>
+      <option value="matematica">Matemática</option>
+      <option value="medicina_veterinaria">Medicina Veterinária</option>
+      <option value="medicina">Medicina</option>
+      <option value="musica">Música</option>
+      <option value="nutricao">Nutrição</option>
+      <option value="pedagogia">Pedagogia</option>
+      <option value="psicologia">Psicologia</option>
+      <option value="quimica">Química</option>
+      <option value="sistemas_informacao">Sistemas de Informação</option>
+      <option value="teatro">Teatro</option>
+      <option value="turismo_hotelaria">Turismo e Hotelaria</option>
+      <option value="turismo">Turismo</option>
+      <option value="urbanismo">Urbanismo</option>
+    </select>
+ 
+  
+
+  <div class="legenda">
+    <p class="txtLegenda1">Campus</p>
+    <p class="txtLegenda2">Campus Avançado</p>
+  </div>
+  
+ 
+  <div class="map">
+
+    <img id="mapImage"  class="mapImage"   src="./img/mapa_atual1.svg" alt="mapa">
+ 
+    <!-- Ponto para Barreiras -->
+      <div id="barreiras" class="dot" style="left: 79px; top: 215px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus">Barreiras</h2>
+          <a class="dept" href="https://www.dch9.uneb.br/" target="_blank">DCH</a>
+        </div>
+      </div>
+    </a>
+ 
+    <!-- Ponto para Eunápolis -->
+      <div id="eunapolis" class="dot" style="left: 410px; top: 455px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon"> <h2 class="campus"> Eunápolis</h2>
+          <a class="dept" href="https://dcht18.uneb.br/" target="_blank">DHCT</a>
+        </div>
+      </div>
+    </a>
+ 
+    <!-- Ponto para Guanambi -->
+      <div id="guanambi" class="dot" style="left: 199px; top: 341px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon"> <h2 class="campus"> Guanambi</h2>
+          <a class="dept" href="https://www.dedc12.uneb.br/" target="_blank">DEDC</a>
+        </div>
+      </div>
+    </a>
+   
+ 
+    <!-- Ponto para Ipiaú -->
+      <div id="ipiau" class="dot" style="left: 383px; top: 332px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus"> Ipiaú</h2>
+          <a class="dept" href="https://dcht21.uneb.br/" target="_blank">DCHT</a>
+          </div>
+      </div>
+ 
+    <!-- Ponto para Brumado -->
+      <div id="brumado" class="dot" style="left: 287px; top: 327px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus">Brumado</h2>
+          <a class="dept" href="https://dcht20.uneb.br/" target="_blank">DCHT</a>
+        </div>
+      </div>
+   
+ 
+    <!-- Ponto para Caetité -->
+      <div id="caetite" class="dot" style="left: 235px; top: 324px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus"> Caetité</h2>
+          <a class="dept" href="https://dch6.uneb.br/" target="_blank">DCH</a>
+        </div>
+      </div>
+    </a>
+ 
+    <!-- Ponto para Bom Jesus da Lapa -->
+      <div id="bjlapa" class="dot" style="left: 180px; top: 270px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus"> Bom Jesus da Lapa</h2>
+          <a class="dept" href="https://dcht17.uneb.br/" target="_blank">DCHT</a>
+         </div>
+      </div>
+   
+   
+    <!-- Ponto para Lauro de Freitas -->
+      <div id="lfreitas" class="dot" style="left: 486px; top: 250px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus">Lauro de Freitas</h2>
+          <a class="dept" href="https://portal.uneb.br/" target="_blank">DMCE</a>
+        </div>
+     </div>
+   
+    <!-- Ponto para Paulo Afonso-->
+      <div id="pafonso" class="dot" style="left: 463px; top: 50px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus">Paulo Afonso</h2>
+          <a class="dept" href="https://dedc8.uneb.br/" target="_blank">DEDC</a>
+        </div>
+      </div>
+   
+    <!-- Ponto para Salvador -->
+      <div id="salvador" class="dot" style="left: 470px; top: 262px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus">Salvador</h2>
+          <a class="dept" href="https://dch1.uneb.br/" target="_blank">DCH </a>
+          <a class="dept" href="https://www.dcet1.uneb.br/" target="_blank">DCET </a>
+          <a class="dept" href="https://dcv1.uneb.br//" target="_blank">DCV </a>
+          <a class="dept" href="https://www.dedc1.uneb.br/" target="_blank">DEDC </a>
+        </div>
+      </div>
+
+       <!-- Ponto para Camaçari -->
+       <div id="camacari" class="dot" style="left: 480px; top: 232px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus">Camaçari</h2>
+          <a class="dept" href="https://dcht19.uneb.br/" target="_blank">DCHT</a>
+        </div>
+     </div>
+ 
+    <!-- Ponto para Seabra -->
+      <div id="seabra" class="dot" style="left: 274px; top: 240px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus">Seabra</h2>
+          <a class="dept" href="https://www.dcht23.uneb.br/" target="_blank">DCHT</a>
+        </div>
+      </div>
+   
+    <!-- Ponto para Teixeira de Freitas -->
+      <div id="tfreitas" class="dot" style="left: 390px; top: 530px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus"> Teixeira de Freitas</h2>
+          <a class="dept" href="https://dedc10.uneb.br/" target="_blank">DEDC</a>
+        </div>
+      </div>
+ 
+    <!-- Ponto para Valença -->
+      <div id="valenca" class="dot" style="left: 420px; top: 315px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus">Valença</h2>
+          <a class="dept" href="https://dedc15.uneb.br/" target="_blank">DEDC</a>
+        </div>
+      </div>
+   
+    <!-- Ponto para Santo Antônio de Jesus -->
+      <div id="saj" class="dot" style="left: 407px; top: 255px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus"> Santo Antônio de Jesus</h2>
+          <a class="dept" href="https://dch5.uneb.br/" target="_blank">DCH</a>
+        </div>
+      </div>
+   
+    <!-- Ponto para Alagoinhas -->
+      <div id="alagoinhas" class="dot" style="left: 456px; top: 220px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus">Alagoinhas</h2>
+          <a href="https://www.dcet2.uneb.br/" target="_blank">DCET</a>
+          <a href="https://www.dedc2.uneb.br/" target="_blank">DEDC</a>
+        </div>
+      </div>
+   
+    <!-- Ponto para Serrinha-->
+      <div id="serrinha" class="dot" style="left: 432px; top: 188px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus"> Serrinha</h2>
+          <a href="https://dedc11.uneb.br/" target="_blank">DEDC</a>
+        </div>
+      </div>
+   
+    <!-- Ponto para Euclides da Cunha-->
+      <div id="euclides" class="dot" style="left: 432px; top: 135px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus">Euclides da Cunha</h2>
+          <a href="https://www.dcht22.uneb.br/" target="_blank">DCHT</a>
+        </div>
+      </div>
+   
+    <!-- Ponto para Senhor do Bonfim -->
+      <div id="bonfim" class="dot" style="left: 365px; top: 132px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus">Senhor do Bonfim</h2>
+          <a href="https://www.dedc7.uneb.br/" target="_blank">DEDC</a>
+        </div>
+      </div>
+    </a>
+ 
+    <!-- Ponto para Conceição do Coité-->
+      <div id="ccoite" class="dot" style="left: 409px; top: 185px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus"> Conceição do Coité</h2>
+          <a href="https://www.dedc14.uneb.br/" target="_blank">DEDC</a>
+        </div>
+      </div>
+   
+    <!-- Ponto para Juazeiro-->
+      <div id="juazeiro" class="dot" style="left: 360px; top: 68px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus">Juazeiro</h2>
+          <a href="https://www.dch3.uneb.br/" target="_blank">DCH</a>
+          <a href="https://www.dtcs3.uneb.br/" target="_blank">DTCS</a>
+        </div>
+      </div>
+   
+    <!-- Ponto para Itaberaba -->
+      <div id="itaberaba" class="dot" style="left: 357px; top: 228px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus">Itaberaba</h2>
+          <a href="https://www.dedc13.uneb.br/" target="_blank">DEDC</a>
+        </div>
+      </div>
+    </a>
+ 
+    <!-- Ponto para Jacobina -->
+      <div id="jacobina" class="dot" style="left: 345px; top: 175px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus">Jacobina</h2>
+          <a href="https://www.dch4.uneb.br/" target="_blank">DCH</a>
+          </div>
+      </div>
+    </a>
+ 
+    <!-- Ponto para Irecê -->
+      <div id="irece" class="dot" style="left: 264px; top: 178px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus"> Irecê</h2>
+          <a href="https://www.dcht16.uneb.br/" target="_blank">DCHT</a>
+        </div>
+      </div>
+    </a>
+ 
+    <!-- Ponto para Xique-Xique -->
+      <div id="xique-xique" class="dot" style="left: 202px; top: 167px;">
+        <span class="ping2"></span><span class="ping3"></span>
+        <div class="balloon">
+          <h2 class="campus"> Xique-Xique</h2>
+          <a href="https://www.dcht24.uneb.br/" target="_blank">DCHT</a>
+          </div>
+      </div>
+
+       <!-- Ponto para Jeremoabo -->
+       <div id="jeremoabo" class="dot dot-jeremoabo" style="left: 470px; top: 95px;">
+        <span class="ping2 ping2-jeremoabo"></span><span class="ping3 ping3-jeremoabo"></span>
+        <div class="balloon balloon-jeremoabo">
+          <h2 class="campus"> Jeremoabo</h2>
+          <a href="http://portal.uneb.br/" target="_blank">DCT/OPARÁ</a>
+          </div>
+      </div>
+ 
+      <!-- Ponto para Canudos -->
+      <div id="canudos" class="dot dot-canudos" style="left: 428px; top: 81px;">
+        <!-- <span class="ping2 ping2-canudos"></span><span class="ping3 ping3-canudos"></span> --> 
+        <!--quando Canudos passar a ser Departamento, apenas remover comentário da linha acima-->
+        <div class="balloon balloon-canudos">
+          <h2 class="campus">Canudos</h2>
+          <a href="http://www.canudos.uneb.br/" target="_blank">Campus Avançado</a>
+          </div>
+      </div>
+   
+      </div>
+
+<div id="dados">
+
+  <div class="dados">
+
+  <table>
+    <tr>
+        <td class="numeros">26.931</td>
+        <td>alunos de graduação</td>
+    </tr>
+    <tr>
+        <td class="numeros">5.331</td>
+        <td>alunos de pós-graduação</td>
+    </tr>
+    <tr>
+        <td class="numeros">2.181</td>
+        <td>docentes</td>
+    </tr>
+    <tr>
+        <td class="numeros">1.656</td>
+        <td>técnicos adm</td>
+    </tr>
+</table>
+
+<table>
+  <tr>
+      <td class="numeros">46</td>
+      <td>cursos presenciais</td>
+  </tr>
+  <tr>
+      <td class="numeros">26</td>
+      <td>campi</td>
+  </tr>
+  <tr>
+      <td class="numeros">31</td>
+      <td>departamentos</td>
+  </tr>
+  <tr>
+      <td class="numeros">14</td>
+      <td>cursos ead</td>
+  </tr>
+</table>
+
+</div>
+
+</div>
+
+</section>
+ 
+</body>
+ 
+</html>

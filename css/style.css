@@ -1,0 +1,316 @@
+:root{
+    --color-dot: #355ba0;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2,h3, p{
+    margin: 0;
+  }
+
+  .ping1,
+  .ping2,
+  .ping3 {
+    position: absolute;
+    z-index: 88;
+    left: 50%;
+    top: 50%;
+    display: block;
+    content: "";
+    -webkit-border-radius: 116px;
+    -moz-border-radius: 116px;
+    border-radius: 116px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    width: 0;
+    height: 0;
+    margin-left: -2px;
+    margin-top: -2px;
+  }
+
+  .dot:hover .ping1,
+  .dot:hover .ping2,
+  .dot:hover .ping3 {
+    transition: all 0.75s ease-out;
+    -webkit-transition: all 0.75s ease-out;
+    -moz-transition: all 0.75s ease-out;
+    -o-transition: all 0.75s ease-out;
+    border-color: var(--color-dot);
+  }
+
+  .dot:hover .ping1 {
+    width: 66px;
+    height: 66px;
+    margin-left: -35px;
+    margin-top: -35px;
+  }
+
+  .dot:hover .ping2 {
+    width: 40px;
+    height: 40px;
+    margin-left: -22px;
+    margin-top: -22px;
+    -moz-transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+  }
+
+  .dot:hover .ping3 {
+    width: 20px;
+    height: 20px;
+    margin-left: -12.35px;
+    margin-top: -12.35px;
+    -moz-transition-delay: 0.5s;
+    -webkit-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+  }
+
+  .map {
+    position: relative;
+  }
+
+  .dot {
+    position: absolute;
+    z-index: 99;
+    width: 16px;
+    height: 16px;
+    background: var(--color-dot);
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    border: 2px solid #e6e7e8;
+    box-sizing: border-box;
+    transform: translate(-50%, -50%);
+  }
+
+  .dot.inativo {
+    border: none; 
+}
+
+  #barreiras.dot,
+  #bonfim.dot,
+  #juazeiro.dot,
+  #seabra.dot,
+  #irece.dot,
+  #xique-xique.dot{
+    z-index: 999;
+  }
+
+  .dot-canudos{
+    border: 2px dotted var(--color-dot);
+    background: transparent;
+  }
+
+  .dot:hover .balloon {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+  }
+
+  .balloon {
+    position: relative;
+    background-color: #355aa0f3;
+    color: #fff;
+    padding: 5px 10px 10px;
+    border-radius: 4px;
+    display: block;
+    opacity: 0;
+    transform: scale(0);
+    z-index: 100;
+    transition: opacity 2s ease-in-out;
+    width: 6rem;
+    text-align: center;
+    font-size: .7rem;
+    letter-spacing: .02rem;
+    line-height: 1.5rem;
+    }
+
+  .balloon h2{
+   line-height: 1.2rem;
+   padding: .5rem 0;
+  }
+ 
+  .balloon a{
+    display: block;
+  }
+
+
+  .balloon-canudos a{
+   line-height: 1.2rem;
+  }
+
+  .balloon-canudos p:hover{
+   background-color: transparent;
+   cursor: default;
+  }
+
+  .dot:hover .balloon a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .dot:hover .balloon a:hover {
+    background-color:  #5077bf9f;
+    border-radius: 4px;
+  }
+
+
+  .campus {
+    font-weight: 100;
+    font-size: .9rem;
+    cursor: default;
+    color: #fece6f;
+   
+  }
+
+  .dot.inativo {
+    background-color: transparent;
+  }
+
+  .dot.inativo .ping3,
+  .dot.inativo .ping2,
+  .dot.inativo .ping1 {
+    border-color: transparent;
+  }
+
+
+  #cursoSelect {
+    margin: 1rem;
+    padding: .2rem .8rem;
+  }
+
+  #cursoSelect option[selected] {
+    font-weight: bold;
+  }
+
+  @keyframes pulsar {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  .pulsar {
+    animation: pulsar 0.8s ease-in-out infinite;
+    background-color: rgb(173, 16, 16);
+  }
+
+  .pulsar:hover {
+    animation: none;
+  }
+
+  .vermelho .ping3,
+  .vermelho .ping2,
+  .vermelho .ping1 {
+   
+    border-color: rgb(173, 16, 16);
+    z-index: -1;
+  }
+
+  .dept{
+    padding: 0 2rem;
+  }
+
+ .multicampi{
+  width: 20rem;
+  position: relative;
+ }
+
+ .cursoSelect{
+  width: 11rem;
+  font-family: "Poppins", sans-serif;
+  font-size: .7rem;
+  position: absolute;
+  left: 28rem;
+  top: 5.5rem;
+  color: #666;
+ }
+
+
+ .legenda{
+  margin-left: 4.1rem;
+  margin-top: 1.5rem;
+  color: #8791A2;
+  font-size: .8rem;
+  margin-bottom: 0;
+  position: absolute;
+ 
+ }
+
+
+ .txtLegenda1{
+  position: relative;
+  
+ }
+
+ .txtLegenda1::before{
+  content: url(../img/dot_preenchido.svg);
+  position: absolute;
+  top: 0;
+  left: -1.2rem;
+ }
+
+ .txtLegenda2{
+  position: relative;
+  margin-top: .5rem;
+  
+ }
+
+ .txtLegenda2::before{
+  content: url(../img/dot_dashed.svg);
+  position: absolute;
+  top: 0;
+  left: -1.2rem;
+ }
+
+ .map{
+  margin-left: 6.2rem;
+ }
+
+  .dados{
+    display: grid;
+    grid-template-columns: 15rem 15rem;
+    padding: 0;
+    margin: 0;
+    margin-top:-10rem;
+  }
+
+ .numeros{
+ padding-right: 1rem;
+ font-family: "poppins", sans-serif;
+ color: #597ab2ae;
+ font-weight: 600;
+ font-size: 1.2rem;
+ text-align: right;
+ }
+
+ .dados td:not(.numeros){
+  text-transform: uppercase;
+  font-size: .65rem;
+  color: #8791A2;
+  font-weight: 500;
+ }
+
+ .first-section{
+    padding: 20px;  
+ }
+
+ .multicampi-title img{
+    width: 400px;
+ }
