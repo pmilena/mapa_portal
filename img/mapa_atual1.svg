@@ -27,15 +27,15 @@
    inkscape:pagecheckerboard="0"
    inkscape:deskcolor="#d1d1d1"
    showgrid="false"
-   inkscape:zoom="16.151626"
-   inkscape:cx="514.40641"
-   inkscape:cy="85.130747"
+   inkscape:zoom="2.0189533"
+   inkscape:cx="515.36607"
+   inkscape:cy="85.192661"
    inkscape:window-width="1920"
    inkscape:window-height="1009"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
-   inkscape:current-layer="g832-7-4-1"
+   inkscape:current-layer="g2590"
    showguides="false" />
 <defs
    id="defs2">
@@ -4636,7 +4636,8 @@
    transform="matrix(3.7795276,0,0,3.7795276,-101.32632,-278.59479)"><g
      id="g16398"
      transform="matrix(1.0407446,0,0,1.0225072,155.57042,13.560171)"
-     style="opacity:0.8"><g
+     style="opacity:0.8"
+     sodipodi:insensitive="true"><g
        id="g10839"
        transform="matrix(0.26458333,0,0,0.26458333,-251.24178,61.775694)"><path
          class="cls-19"
@@ -7356,7 +7357,7 @@
          id="path1957"
          style="opacity:1" /><polygon
          class="cls-276"
-         points="797.24,296.8 797.08,296.81 797.22,296.65 "
+         points="797.08,296.81 797.22,296.65 797.24,296.8 "
          id="polygon1959"
          transform="matrix(0.68154526,0,0,0.87662701,419.87082,-64.269988)"
          style="opacity:1" /><path
@@ -11081,7 +11082,7 @@
          id="path3819"
          style="opacity:1" /><polygon
          class="cls-50"
-         points="551.94,302.57 552.14,302.46 552.03,302.66 "
+         points="552.14,302.46 552.03,302.66 551.94,302.57 "
          id="polygon3821"
          transform="matrix(0.68154526,0,0,0.87662701,419.87082,-64.269988)"
          style="opacity:1" /><path
@@ -11968,7 +11969,7 @@
    id="path2030-5-6" />
 </g><g
      id="g2054-8-7"
-     transform="matrix(0.26458333,0,0,0.26458333,27.378497,71.27657)">
+     transform="matrix(0.26458333,0,0,0.26458333,27.378497,69.689069)">
 	<path
    d="m 425.6,217.521 -0.56,1.695 h -0.72 l 1.831,-5.389 h 0.839 l 1.839,5.389 h -0.743 l -0.576,-1.695 z m 1.766,-0.543 -0.527,-1.551 c -0.12,-0.352 -0.2,-0.671 -0.28,-0.983 h -0.016 c -0.08,0.32 -0.168,0.648 -0.272,0.976 l -0.527,1.559 h 1.622 z"
    id="path2034-9-6" />
