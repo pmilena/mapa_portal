@@ -1,3 +1,60 @@
-The map was created as part of the "New portal of the State University of Bahia - UNEB". The objective is for the user to have knowledge of all the departments of the university spread across the various territories of the state, as well as to be able to search for the availability of courses of interest through the 'select' field.
+# Interactive Map – State University of Bahia (UNEB)  
+
+## Overview  
+
+This interactive map was developed as part of the **"New Portal of the State University of Bahia - UNEB"**. It provides users with a comprehensive view of all UNEB campuses and departments distributed across different regions of the state.  
+
+Additionally, the map allows users to search for the availability of undergraduate courses of interest using the **select field**, making it easier to locate academic offerings across UNEB's multiple campuses.  
+
+## Features  
+
+- 📍 **Visualize all UNEB campuses and departments** across the state.  
+- 🔍 **Search for available undergraduate courses** at different campuses.  
+- 🗺️ **Intuitive and interactive navigation** for an enhanced user experience.  
+
+## Access  
+
+The map is available on the UNEB portal:  
+[🔗 portal.uneb.br](https://portal.uneb.br)  
+
+## Screenshots  
+
+<div align="center">
+  <img src="./assets/map-screenshot1.png" alt=""Mapa UNEB" width="400"/>
+</div>  
+
+---
+
+_This project is part of the modernization of UNEB's digital ecosystem, aiming to enhance accessibility and ease of information for students, faculty, and the community._  
+
+
 ***
-Mapa criado como parte do "Novo portal da Universidade do Estado da Bahia - UNEB". O objetivo é que o usuário possa ter conhecimento de todos os campi e departamentos da universidade espalhados nos diversos territórios do estado, além de poder pesquisar onde há disponibilidade do(s) curso(s) de graduação do seu interesse, através do campo 'select'.
+# Mapa Interativo – Universidade do Estado da Bahia (UNEB)  
+
+## Visão Geral  
+
+Este mapa interativo foi desenvolvido como parte do **"Novo Portal da Universidade do Estado da Bahia - UNEB"**. Ele oferece aos usuários uma visão completa de todos os campi e departamentos da UNEB, distribuídos pelos diferentes territórios do estado.  
+
+Além disso, o mapa permite pesquisar a disponibilidade de cursos de graduação por meio do **campo select**, facilitando a localização das ofertas acadêmicas nos diversos campi da UNEB.  
+
+## Funcionalidades  
+
+- 📍 **Visualize todos os campi e departamentos** da UNEB espalhados pelo estado.  
+- 🔍 **Pesquise cursos de graduação disponíveis** em diferentes campi.  
+- 🗺️ **Navegação intuitiva e interativa** para uma melhor experiência do usuário.  
+
+## Acesso  
+
+O mapa está disponível no portal da UNEB:  
+[🔗 portal.uneb.br](https://portal.uneb.br)  
+
+## Capturas de Tela  
+
+<div align="center">
+  <img src="./assets/map-screenshot1.png" alt="Mapa UNEB" width="400"/>
+</div>  
+
+---
+
+_Este projeto faz parte da modernização do ecossistema digital da UNEB, com o objetivo de melhorar o acesso à informação para estudantes, professores e a comunidade._  
+
