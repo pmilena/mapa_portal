@@ -20,7 +20,7 @@ The map is available on the UNEB portal:
 ## Screenshots  
 
 <div align="center">
-  <img src="./assets/map-screenshot1.png" alt=""Mapa UNEB" width="400"/>
+  <img src="./img/1715951860108.jpg" alt=""Mapa UNEB" width="400"/>
 </div>  
 
 ---
@@ -51,7 +51,7 @@ O mapa está disponível no portal da UNEB:
 ## Capturas de Tela  
 
 <div align="center">
-  <img src="./assets/map-screenshot1.png" alt="Mapa UNEB" width="400"/>
+    <img src="./img/1715951860108.jpg" alt=""Mapa UNEB" width="400"/>
 </div>  
 
 ---
